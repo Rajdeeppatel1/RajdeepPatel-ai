@@ -170,14 +170,6 @@ export function Hero() {
                 />
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1, type: "spring" }}
-                className="absolute -bottom-2 -right-2 px-4 py-2 bg-card border border-purple-500/30 rounded-full shadow-lg"
-              >
-                <span className="text-sm font-semibold text-gradient">400+ Problems</span>
-              </motion.div>
             </div>
           </motion.div>
         </div>
