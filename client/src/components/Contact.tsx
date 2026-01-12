@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Code2, Send, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, Code2, Send, ArrowUpRight, Sparkles, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contactLinks = [
@@ -28,10 +28,20 @@ const contactLinks = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-32 relative bg-card/30">
+    <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 noise pointer-events-none" />
       
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <motion.div
+        animate={{ 
+          scale: [1, 1.2, 1],
+          x: [0, 30, 0],
+          y: [0, -20, 0]
+        }}
+        transition={{ duration: 15, repeat: Infinity }}
+        className="absolute top-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-600/15 to-pink-600/15 rounded-full blur-3xl"
+      />
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,6 +49,15 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6"
+          >
+            <Sparkles className="w-4 h-4 text-purple-400" />
+            <span className="text-sm text-purple-300">Let's Connect</span>
+          </motion.div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-4">
             Get in <span className="text-gradient">Touch</span>
           </h2>
@@ -59,15 +78,18 @@ export function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 className="group relative"
                 data-testid={`link-contact-${link.name.toLowerCase()}`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300 blur-xl`} />
-                <div className="relative bg-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 text-center card-glow">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${link.color} flex items-center justify-center mx-auto mb-4`}>
-                    <link.icon className="h-6 w-6 text-white" />
-                  </div>
+                <div className={`absolute -inset-0.5 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-40 rounded-2xl transition-all duration-500 blur-xl`} />
+                <div className="relative bg-card border border-purple-500/10 rounded-2xl p-6 hover:border-purple-500/30 transition-all duration-500 text-center">
+                  <motion.div 
+                    whileHover={{ rotate: 10, scale: 1.1 }}
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${link.color} flex items-center justify-center mx-auto mb-4 shadow-lg`}
+                  >
+                    <link.icon className="h-7 w-7 text-white" />
+                  </motion.div>
                   <h3 className="font-display font-semibold mb-1">{link.name}</h3>
                   <p className="text-sm text-muted-foreground truncate">{link.value}</p>
                   <ArrowUpRight className="h-4 w-4 absolute top-4 right-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -86,17 +108,22 @@ export function Contact() {
             <p className="text-muted-foreground mb-6">
               Looking forward to connecting with you!
             </p>
-            <Button
-              size="lg"
-              className="glow-sm font-semibold"
-              asChild
-              data-testid="button-send-email"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <a href="mailto:pateltajdeep537@gmail.com">
-                <Send className="mr-2 h-4 w-4" />
-                Send me an Email
-              </a>
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-primary hover:opacity-90 glow-sm font-semibold px-8"
+                asChild
+                data-testid="button-send-email"
+              >
+                <a href="mailto:pateltajdeep537@gmail.com">
+                  <Send className="mr-2 h-4 w-4" />
+                  Send me an Email
+                </a>
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -105,11 +132,14 @@ export function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="mt-20 pt-8 border-t border-border"
+        className="mt-20 pt-8 border-t border-purple-500/10"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2026 Rajdeep Patel. Built with React & Tailwind CSS.
+          <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
+            Made with <Heart className="h-4 w-4 text-pink-500 fill-pink-500" /> by Rajdeep Patel
+          </p>
+          <p className="text-xs text-muted-foreground/60 mt-2">
+            Built with React, Tailwind CSS & Framer Motion
           </p>
         </div>
       </motion.footer>
