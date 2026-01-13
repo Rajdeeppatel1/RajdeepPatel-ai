@@ -21,11 +21,12 @@ const skillCategories = [
     ],
   },
   {
-    title: "AI / Emerging Tech",
+    title: "AI & IoT",
     icon: Brain,
     color: "from-pink-500 to-rose-600",
     skills: [
       "Machine Learning (Basics)",
+      "Internet of Things (IoT)",
       "Prompt Engineering",
     ],
   },
