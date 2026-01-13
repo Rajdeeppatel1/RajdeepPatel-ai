@@ -1,7 +1,28 @@
 import { motion } from "framer-motion";
-import { Award, BookOpen, Code, Cpu, FileCheck, GraduationCap } from "lucide-react";
+import { Award, BookOpen, Code, Cpu, FileCheck, GraduationCap, Terminal, Sparkles } from "lucide-react";
 
 const certifications = [
+  {
+    title: "Red Hat Linux Fundamentals",
+    issuer: "Red Hat Certified",
+    icon: Terminal,
+    description: "Certified in Linux system administration fundamentals and command-line operations.",
+    color: "from-red-600 to-red-400",
+  },
+  {
+    title: "Oracle Gen AI Professional",
+    issuer: "Oracle Certified",
+    icon: Sparkles,
+    description: "Specialized in Generative AI concepts, LLMs, and practical AI implementations.",
+    color: "from-red-500 to-orange-400",
+  },
+  {
+    title: "Oracle Cloud Infrastructure Foundations",
+    issuer: "Oracle Associate",
+    icon: Cpu,
+    description: "Certified associate in cloud infrastructure services and cloud computing basics.",
+    color: "from-red-400 to-rose-400",
+  },
   {
     title: "Python Certification",
     issuer: "Professional Certification",

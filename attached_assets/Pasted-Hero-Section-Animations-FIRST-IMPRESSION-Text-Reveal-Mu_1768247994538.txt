@@ -1,0 +1,111 @@
+Hero Section Animations (FIRST IMPRESSION 🔥)
+✅ Text Reveal (Must-have)
+What
+Your name
+Your title line
+Example:
+“B.Tech CSE (AI/ML) Student architecting the future…”
+Animation
+Fade in + slight upward motion
+Delay each line (stagger effect)
+Why
+Looks premium
+Makes content readable and engaging
+2️⃣ Profile Image Animation (Very Important)
+✅ Scale + Glow on Load
+What
+Your circular photo
+Animation
+Scale from 0.9 → 1
+Soft glow / border pulse once
+Why
+Focuses attention on you
+Adds “AI-tech” vibe
+3️⃣ Navbar Animation (Subtle Only)
+✅ Slide-down on page load
+What
+Navbar appears from top
+✅ Hover underline animation
+What
+About | Skills | Projects | Contact
+Why
+Shows polish
+Feels like real product UI
+4️⃣ Section Reveal on Scroll (MOST IMPORTANT)
+✅ Scroll-triggered animations
+Apply to
+Skills
+Problem Solving
+Hackathons
+Projects
+Certifications
+Animation
+Fade + slide up
+Trigger only once
+Why recruiters love this
+Content appears step-by-step
+No overload
+Professional UX
+5️⃣ Skills Section Animations 🧠
+✅ Skill Cards Hover Effect
+What
+Each skill card
+Animation
+Slight lift
+Shadow increase
+Icon rotate (very small)
+Example
+Copy code
+
+DSA
+OOP
+Machine Learning
+Git & GitHub
+Why
+Shows interaction design sense
+Makes boring skills interesting
+6️⃣ Problem Solving / CodeChef Section 💻
+✅ Counter Animation (Very Strong)
+What
+400+ Problems Solved
+Top Contest Participation
+Animation
+Numbers count from 0 → 400
+Why
+Psychologically powerful
+Makes achievement feel BIG
+7️⃣ Hackathons Section 🏆
+✅ Card Flip or Slide Animation
+What
+Smart India Hackathon
+SAP Hackathon (Top 10)
+Animation
+Slide from left/right
+OR subtle flip on hover
+Why
+Highlights achievements
+Recruiter’s eyes STOP here
+8️⃣ Projects Section (MOST JUDGED)
+✅ Hover Image Overlay
+What
+Project cards
+Animation
+On hover:
+Image zoom
+Overlay with:
+Tech stack
+GitHub link
+Live demo
+Why
+Industry-level portfolio behavior
+9️⃣ Buttons Animation (CTA)
+✅ Magnetic / Pulse Effect
+Apply to
+“View Resume”
+“Contact Me”
+“GitHub”
+Animation
+Soft pulse
+Scale on hover
+Why
+Encourages clicks
